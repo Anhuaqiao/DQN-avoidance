@@ -67,7 +67,6 @@ def ReleaseKey(hexKeyCode):
 
 def jump():
     PressKey(LSHIFT)
-    print("jump")
 
 
 def cancel_jump():
@@ -77,13 +76,17 @@ def cancel_jump():
 
 def go_left():
     PressKey(LEFT)
-    time.sleep(0.01)
+
+
+def stop_left():
     ReleaseKey(LEFT)
 
 
 def go_right():
     PressKey(RIGHT)
-    time.sleep(0.01)
+
+
+def stop_right():
     ReleaseKey(RIGHT)
 
 
@@ -97,6 +100,12 @@ def press_esc():
     PressKey(esc)
     time.sleep(0.3)
     ReleaseKey(esc)
+
+
+def release_all():
+    ReleaseKey(LSHIFT)
+    ReleaseKey(LEFT)
+    ReleaseKey(RIGHT)
 
 
 if __name__ == '__main__':
